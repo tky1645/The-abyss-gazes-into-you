@@ -1,14 +1,8 @@
 import numpy as np
 import openpyxl as op
 import time
-
-class CalcTime:
-    def __init__(self):
-       initialTime = time.time()
-       print("you started to  watch from : "+ str(time.time()))
-
-    def TryTest(self):
-        print(time.time())
+import calcTime as calc
+import BrowserController as bc
 
 
 #シート読み込み
@@ -25,6 +19,16 @@ for name in book.get_sheet_names():
 activeSheet = book.active
 print(activeSheet.cell(column=1,row=1).value)
 
-calcTime = CalcTime()
-calcTime.TryTest()
+CT = calc.CalcTime()
+
+CT.StartTimer()
+CT.StopTimer()
+CT.Display()
+
+
+bc = bc.BrowserController()
+bc.test()
+
+
+
 

@@ -21,7 +21,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="calcTime.py">
+    <Compile Include="BrowserController.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalcTime.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PythonApplication1.py" />
